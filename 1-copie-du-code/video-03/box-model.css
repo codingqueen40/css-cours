@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+/* Parent : fond gris clair */
+.parent {
+    background-color: #ddd;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+/* Enfant : fond jaune + margin-top */
+.enfant {
+    background-color: #FFF5C0;
+    height: 50px;
+    margin-top: 30px;
+    /* marge verticale qui va fusionner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* Solution 1 : padding sur le parent */
+.solution1 {
+    padding-top: 1px;
+    /* empêche la fusion */
+}
+
+
+
+
+
+
+
+
+/* Solution 2 : border sur le parent */
+.solution2 {
+    border-top: 1px solid transparent;
+    /* empêche la fusion */
+}

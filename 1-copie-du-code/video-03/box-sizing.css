@@ -1,0 +1,136 @@
+:root {
+    --violet: #5A3D9C;
+    --jaune: #FFD54F;
+    --jaune-clair: #FFF6CC;
+    --gris: #e7e7e7;
+    --texte: #222;
+}
+
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: content-box;
+}
+
+/* volontairement, pour bien montrer la diff */
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #faf9ff;
+    color: var(--texte);
+    padding: 32px 20px 60px;
+}
+
+h1 {
+    color: var(--violet);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.note {
+    text-align: center;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+/* Règles de mise en page */
+.demo-row {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.panel {
+    background: #fff;
+    border: 1px solid var(--gris);
+    border-radius: 12px;
+    padding: 18px;
+    width: min(560px, 100%);
+}
+
+.panel h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+/* Règlette de mesure visuelle derrière chaque boîte */
+.panel .box {
+    background:
+        repeating-linear-gradient(to right,
+            #f1eefb 0 10px,
+            #e8e4fa 10px 20px);
+    /* propriétés communes aux deux cas */
+    width: 300px;
+    padding: 20px;
+    border: 10px solid var(--jaune);
+    border-radius: 10px;
+    margin: 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #2f2a1a;
+    background-clip: padding-box;
+}
+
+/* Cas 1 : content-box (par défaut) -> plus large que 300px */
+.content-box {
+    box-sizing: content-box;
+    padding: 20px;
+    border: 10px solid var(--jaune);
+    background:
+        repeating-linear-gradient(to right,
+            #f1eefb 0 10px,
+            #e8e4fa 10px 20px);
+    width: 300px;
+    /* largeur du contenu */
+    margin: 14px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Le vrai contour rouge autour uniquement du contenu */
+.content-area {
+    width: 300px;
+    /* zone de contenu */
+    outline: 3px dashed #c0392b;
+    outline-offset: 0;
+    /* pas de décalage */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Cas 2 : border-box -> tout compris dans 300px */
+.border-box {
+    box-sizing: border-box;
+    outline: 3px dashed #2e7d32;
+    /* même contour, mais ne dépasse pas */
+    background-color: var(--jaune-clair);
+}
+
+.calc {
+    text-align: center;
+    color: #555;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* Snippet */
+.snippet {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    width: min(680px, 100%);
+    margin: 10px auto 0;
+    overflow: auto;
+}

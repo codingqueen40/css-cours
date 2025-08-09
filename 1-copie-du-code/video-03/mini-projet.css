@@ -1,0 +1,12 @@
+.boite {
+    padding: 20px;
+    margin: 40px auto;
+    border: 3px dashed #9b59b6;
+    background-color: #f3e6ff;
+    width: 300px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #3d2d5c;
+    box-sizing: border-box;
+    overflow: auto;
+}

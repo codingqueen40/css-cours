@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌊 Overflow : visible, hidden, scroll, auto</title>
+    <link rel="stylesheet" href="overflow.css" />
+</head>
+
+<body>
+
+    <h1>🌊 Overflow en CSS : visible · hidden · scroll · auto</h1>
+    <p class="intro">
+        Chaque boîte ci-dessous a <code>width: 260px</code> et
+        <code>height: 120px</code> avec un texte trop long.
+        Observe comment le contenu débordant est géré selon la valeur
+        d’<code>overflow</code>.
+    </p>
+
+    <div class="grid">
+        <!-- visible -->
+        <section class="panel">
+            <h2>visible (défaut)</h2>
+            <div class="box visible">
+                <div class="content">
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                    Ce texte déborde...
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                </div>
+            </div>
+            <p class="note">Le contenu dépasse la boîte.</p>
+        </section>
+
+        <!-- hidden -->
+        <section class="panel">
+            <h2>hidden</h2>
+            <div class="box hidden">
+                <div class="content">
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                    Ce texte déborde...
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                </div>
+            </div>
+            <p class="note">Le surplus est masqué (coupé).</p>
+        </section>
+
+        <!-- scroll -->
+        <section class="panel">
+            <h2>scroll</h2>
+            <div class="box scroll">
+                <div class="content">
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                    Ce texte déborde...
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                </div>
+            </div>
+            <p class="note">Barres de défilement toujours visibles.</p>
+        </section>
+
+        <!-- auto -->
+        <section class="panel">
+            <h2>auto</h2>
+            <div class="box auto">
+                <div class="content">
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                    Ce texte déborde...
+                    Ce texte déborde... Ce texte déborde... Ce texte déborde...
+                </div>
+            </div>
+            <p class="note">Barres seulement si nécessaire.</p>
+        </section>
+    </div>
+
+    <hr />
+
+    <h2>Variantes ciblées</h2>
+    <div class="grid two">
+        <section class="panel">
+            <h3>overflow-x: auto; overflow-y: hidden;</h3>
+            <div class="box ox-auto-oy-hidden">
+                <div class="content wide">
+                    ⟶ Contenu très large pour forcer un scroll horizontal… ⟶
+                    Contenu très large…
+                </div>
+            </div>
+            <p class="note">Défilement horizontal seulement.</p>
+        </section>
+
+        <section class="panel">
+            <h3>overflow-y: auto; overflow-x: hidden;</h3>
+            <div class="box oy-auto-ox-hidden">
+                <div class="content tall">
+                    Contenu très haut<br />Contenu très haut<br />Contenu très
+                    haut<br />Contenu très haut<br />
+                    Contenu très haut<br />Contenu très haut<br />Contenu très
+                    haut<br />Contenu très haut<br />
+                </div>
+            </div>
+            <p class="note">Défilement vertical seulement.</p>
+        </section>
+    </div>
+
+    <p class="tip">
+        💡 Bonus : pour du texte sur une seule ligne, combine
+        <code>white-space: nowrap</code>,
+        <code>overflow: hidden</code> et <code>text-overflow: ellipsis</code>
+        pour afficher « … ».
+    </p>
+
+</body>
+
+</html>

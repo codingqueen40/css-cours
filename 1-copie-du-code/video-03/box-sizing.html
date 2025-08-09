@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📐 DIMENSIONS ET BOX-SIZING</title>
+    <link rel="stylesheet" href="box-sizing.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Box-sizing : content-box vs border-box</title>
+        <link rel="stylesheet" href="box-sizing.css" />
+    </head>
+
+    <body>
+
+        <h1>Box-sizing : content-box vs border-box</h1>
+
+        <p class="note">
+            Chaque boîte ci‑dessous déclare <strong>width: 300px; padding: 20px;
+                border: 10px</strong>.
+            Seul <code>box-sizing</code> change.
+        </p>
+
+        <div class="demo-row">
+            <section class="panel">
+                <h2>SANS box-sizing (content-box)</h2>
+                <div class="box content-box">
+                    <span class="content-area">Contenu</span>
+                </div>
+                <p class="calc">Largeur réelle = 300 + (20×2) + (10×2) =
+                    <strong>360px</strong>
+                </p>
+            </section>
+
+            <section class="panel">
+                <h2>AVEC box-sizing (border-box)</h2>
+                <div class="box border-box">
+                    <span>Contenu</span>
+                </div>
+                <p class="calc">Largeur réelle = <strong>300px</strong> (padding
+                    +
+                    bordure inclus)</p>
+            </section>
+        </div>
+
+        <hr />
+
+        <h2>Bonne pratique globale</h2>
+        <pre
+            class="snippet">*, *::before, *::after { box-sizing: border-box; }</pre>
+
+    </body>
+
+    </html>
+</body>
+
+</html>
