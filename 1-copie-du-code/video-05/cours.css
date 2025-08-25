@@ -1,0 +1,29 @@
+/* Conteneur principal */
+.container {
+    display: grid;
+    /* Active le mode grille */
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes égales */
+    grid-template-rows: 100px 150px;
+    gap: 20px;
+    /* Espace entre les colonnes */
+    justify-items: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    /* Couleur de fond du conteneur */
+}
+
+/* Éléments de la grille */
+.item {
+    background-color: #d6e4ff;
+    /* Couleur de fond des blocs */
+    padding: 20px;
+    /* Espace intérieur dans chaque bloc */
+    border: 2px solid #4a90e2;
+    /* Bordure bleue */
+    border-radius: 8px;
+    /* Coins arrondis */
+    font-family: sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
