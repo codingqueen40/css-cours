@@ -1,0 +1,56 @@
+/* Structure de base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #6c5ce7;
+    margin-bottom: 2rem;
+}
+
+/* 💜 Bouton animé */
+.pulse-btn {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 🎯 Survol fluide */
+.pulse-btn:hover {
+    background-color: #6c5ce7;
+    transform: scale(1.1);
+}
+
+/* 💫 Animation Pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
