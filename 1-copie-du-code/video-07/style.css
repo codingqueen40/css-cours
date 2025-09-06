@@ -1,0 +1,77 @@
+html {
+    font-size: 32px;
+}
+
+body {
+    margin: 0;
+}
+
+/* Mauvais : trop rigide */
+h1 {
+    font-size: 32px;
+}
+
+/* Mieux : adaptable */
+h2 {
+    font-size: 1rem;
+    /* 2 x 16 = 32px */
+}
+
+.container {
+    width: 80%;
+    /* largeur de 80% par rapport à la fenêtre 
+    ou à l’élément parent */
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.barre {
+    width: 60%;
+    /* largeur de 60% par rapport au conteneur */
+    height: 30px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+
+.full-screen-section {
+    width: 100vw;
+    /* 100% de la largeur visible de la fenêtre */
+    height: 100vh;
+    /* 100% de la hauteur visible de la fenêtre */
+    background-color: #6a0dad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.box {
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Media query pour les tablettes (max 768px) */
+@media (max-width: 768px) {
+    .box {
+        background-color: #ff69b4;
+        font-size: 1.2rem;
+    }
+}
+
+/* Media query pour les petits écrans (max 480px) */
+@media (max-width: 480px) {
+    .box {
+        background-color: #87ceeb;
+        font-size: 1rem;
+    }
+}
